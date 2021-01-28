@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    margin:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    background-color: rgb(216, 216, 216);
+}
+
+.faq-container{
+    background-color: rgb(5, 199, 5);
+    width:70%;
+}
+
+.faq-container h1{
+    color:#fff;
+}
+
+
+.faq-main{
+    background-color: #fff;
+}
+
+.faq-main h2{
+    color: rgb(5, 199, 5);
+}
+
+.secter{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
