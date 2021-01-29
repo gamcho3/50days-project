@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.album-container{
+    background-image: url("https://images.unsplash.com/photo-1491331606314-1d15535360fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    width:500px;
+    height:500px;
+    border:2px solid brown;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.rippleBtn{
+    font-size:30px;
+    color:#fff;
+    background: transparent;
+    border: 0;
+    width:100%;
+    height:100%;
+    position:relative;/*부모엘리멘트에 있을경우 offset표가 뜨지않음*/
+    overflow:hidden;
+}
+
+.rippleBtn:focus{
+    outline: none;
+}
+
+.circle{
+    position:absolute;
+    width:150px;
+    height:150px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+   transform: translate(-50%,-50%) scale(0);
+    animation : Ripple 0.3s ease-out;
+    
+}
+
+@keyframes Ripple{
+    
+    to{  
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
