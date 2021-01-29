@@ -37,15 +37,15 @@ function getTimes() {
     const month = time.getMonth();
     const date = time.getDate();
     const hourForClock = hour % 12;
-
+    const ampm = hour > 11 ? 'PM' : 'AM';
     hours.style.transform = `translate(-50%,-100%) rotate(${scale(hourForClock, 0, 11, 0, 360)}deg)`;
     minutes.style.transform = `translate(-50%,-100%) rotate(${scale(minute, 0, 59, 0, 360)}deg)`;
     seconds.style.transform = `translate(-50%,-100%) rotate(${scale(second, 0, 59, 0, 360)}deg)`;
 
-    times.innerHTML = `${hour}:${minute < 10 ? `0${minute}` : minute}:${second < 10 ? `0${second}` : second}`;
+    times.innerHTML = `${hour}:${minute < 10 ? `0${minute}` : minute}:${second < 10 ? `0${second}` : second} ${ampm}`;
     dates.innerHTML = `${months[month]}, <span>${days[day]}</span> <span>${date}</span>`;
 
-    console.log(time);
+
 }
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
