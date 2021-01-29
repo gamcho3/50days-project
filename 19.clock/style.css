@@ -30,24 +30,27 @@ body{
     background-color: var(--primary-color);
     color:var(--secondery-color);
     height:100vh;
-    padding-bottom:100px;
+    transition:all 0.2s ease-in;
+    
 }
 
 h1{
     margin:0;
     position: absolute;
-    top:15%;
+    top:10%;
 }
 
 .toggle{
+    cursor: pointer;
     position: absolute;
-    top:20%;
+    top:15%;
     font-size:15px;
     border:0;
     background-color: var(--secondery-color);
     color:var(--primary-color);
     padding:10px 5px;
     border-radius: 10px;
+    
    
 }
 
@@ -57,6 +60,7 @@ h1{
    align-items: center;
    justify-content: space-between;
    
+   
 
 }
 
@@ -65,7 +69,8 @@ h1{
     position: relative;
     width:300px;
     height:300px;
-    background-color: bisque;
+    
+    margin-bottom: 30px;
 }
 
 
@@ -76,5 +81,55 @@ h1{
     height:100px;
     top:50%;
     left:50%;
-transform-origin: ;
+    transform-origin: bottom center;/*중심축을 가운데로 옮김*/
+    transition: transform 0.3s linear;
+}
+
+.needle.hour{
+    transform: translate(-50%,-100%) rotate(50deg);
+    height:60px;
+}
+
+.needle.minute{
+    transform: translate(-50%,-100%) rotate(60deg);
+    height:110px;
+}
+
+.needle.second{
+    transform: translate(-50%,-100%) rotate(80deg);
+    height:95px;
+    background-color: tomato;
+}
+
+.circle{
+    position:absolute;
+    width:15px;
+    height:15px;
+    background-color: var(--secondery-color);
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+.time{
+font-size:50px;
+}
+
+.date{
+    margin:10px 0;
+    font-size:20px;
+    color:var(--secondery-color);
+   position: absolute;
+   bottom:0;
+   left:25%;
+    
+}
+
+.date span:nth-of-type(2){
+    background-color: var(--secondery-color);
+    color:var(--primary-color);
+    border-radius: 50%;
+    padding:3px;
+    
 }
