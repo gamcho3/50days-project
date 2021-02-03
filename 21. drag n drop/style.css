@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: chocolate;
+    display: flex;
+    height:100vh;
+    overflow:hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+
+h1{
+    margin:0;
+    margin-bottom:80px;
+    padding:20px;
+    text-transform: uppercase;
+    animation:changeColor 0.5s linear infinite;
+}
+
+@keyframes changeColor{
+    0%{
+        color:tomato;
+    }
+    50%{
+        color:yellow;
+    }
+    100%{
+        color:blueviolet;
+    }
+}
+
+
+
+.box-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.box{
+    width:150px;
+    height:150px;
+    border: 5px solid black;
+    margin:0 20px;
+}
+
+.fill{
+    background-image: url('https://source.unsplash.com/random');
+    width:100%;
+    height:100%;
+    transition:all 0.3s ease;
+}
+
+.hold{
+    background-color: black;
+    border: 3px dashed grey;
+}
