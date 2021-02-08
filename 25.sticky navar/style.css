@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+body{
+    color:#222;
+    margin-bottom:50px;
+}
+
+.container{
+    max-width:1200px;
+    margin:0 auto;/*마진 오토로 마진값 없애기*/
+}
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color: black;
+    
+    
+    
+}
+
+.nav .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0;
+    transition:all 0.3s ease-in-out;
+    
+}
+
+.nav ul{
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    font-size:17px;
+}
+
+.nav a{
+    text-decoration: none;
+    color:#fff;
+    padding:7px 15px;
+    transition: all 0.3s ease-out;
+}
+
+.nav a:hover{
+    color:red;
+}
+
+.nav.active{
+    background-color: #fff;
+}
+
+.nav.active .container{
+    padding:10px 0;
+}
+
+.nav.active a{
+    color:#222;
+}
+
+.nav.active a:hover{
+    color:green;
+}
+
+
+.hero{
+    background-image: url('https://images.unsplash.com/photo-1608142172765-6949c94646ca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#fff;
+    position:relative;
+    z-index: -2;
+}
+
+.hero .title{
+padding:10px 0;
+font-size:40px;
+text-transform: uppercase;
+letter-spacing: 5px;
+}
+
+.hero .body{
+    font-size:20px;
+}
+
+.hero::before{
+    content:'';
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-color: rgba(0,0,0,0.5);
+z-index:-1;
+}
+
+.content{
+padding:20px;
+}
+
+.content h2{
+    padding:15px 0;
+    font-size:30px;
+}
+
+.content p{
+    margin-bottom:20px;
+    font-size:20px;
+    opacity: 0.6;
+    line-height: 30px;
+}
