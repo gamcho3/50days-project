@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    /*body에 마진과 패딩을 초기화 할경우 위에 빈공간이 생긴다.*/
+}
+
+body{
+    
+    height:100vh;
+    
+    
+}
+
+.container{
+    position:relative;
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+}
+
+
+.leftSlide{
+    position: absolute;
+top:0;
+left:0;
+height:100%;
+width:35%;
+color:#fff;
+transition: transform 0.5s ease-in-out;
+}
+
+.leftSlide h2{
+    letter-spacing: 4px;
+    margin-bottom:10px;
+}
+
+.leftSlide small{
+    
+}
+
+.leftSlide > div{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:30px;
+}
+
+.rightSlide{
+    position: absolute;
+    top:0;
+    left:35%;
+    height:100%;
+    width:65%;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.rightSlide > div{
+    /*div에 백그라운드를 설정해야 밑의 스타일이 적용된다*/
+    height:100%;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+button{
+    position:absolute;
+    left:35%;
+    top:50%;
+    font-size:25px;
+    padding:10px;
+    border:0;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+.down{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transform: translate(-100% ,100%);
+}
+
+.up{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
