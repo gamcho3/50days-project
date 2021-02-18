@@ -43,13 +43,17 @@ function createStar(e) {
     const xInside = x - leftOffset;
     const yInside = y - topOffset;
 
+    //아이콘이 클릭시 나타날 위치들
     star.style.top = `${yInside}px`;
     star.style.left = `${xInside}px`;
 
+    //imageEl 밑에 삽입
     imageEl.appendChild(star);
 
+    //아이콘 지우기
     setTimeout(() => star.remove(), 800)
 
+    //클릭횟수 세기
     times.innerHTML = ++click;
 
 }
