@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+}
+
+.image{
+    background: url('https://images.unsplash.com/photo-1611967556157-d5c8830b5161?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfEJKSk10dGVESkE0fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
+    width:300px;
+    height:500px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+.image .fa-star{
+    position: absolute;
+    opacity: 1;
+    transform: scale(0);
+    animation: popUp 0.4s linear;
+}
+
+
+@keyframes popUp{
+    to{
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+.time{
+    color:red;
+}
+
+.fa-star{
+    color:yellow
+}
+
+h1{
+    margin:20px 0 5px;
+}
+
+h4{
+    margin:10px 0 20px;
+   
+}
