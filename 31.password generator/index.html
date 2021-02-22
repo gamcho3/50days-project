@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Password Generator</h2>
+        <div id="form" class="form">
+            <span id="result" class="result">1qazwsx</span>
+            <button class="btn" id="paste"><i class="far fa-clipboard"></i></button>
+        </div>
+        <main>
+            <div class="setting">
+                <h3>Password Length</h3>
+                <input type="number" name="" id="length" class="length" value="5" min="5" max="11">
+            </div>
+            <div class="setting">
+                <h3>Include uppercase letters</h3>
+                <input type="checkbox" name="" id="uppercase">
+            </div>
+            <div class="setting">
+                <h3>Include lowercase letters</h3>
+                <input type="checkbox" name="" id="lowercase">
+            </div>
+            <div class="setting">
+                <h3>Include numbers</h3>
+                <input type="checkbox" name="" id="number">
+            </div>
+            <div class="setting">
+                <h3>Include symbols</h3>
+                <input type="checkbox" name="" id="symbols">
+            </div>
+
+        </main>
+        <button class="submitBtn" id="submitBtn">generate number</button>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
