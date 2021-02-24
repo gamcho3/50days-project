@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Akaya Telivigala', cursive;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: ivory;
+}
+
+
+.box{
+    display: flex;
+    align-items: center;
+    
+    width:200px;
+}
+
+.input{
+visibility: hidden;
+}
+
+label{
+    background-color: grey;
+    width:70px;
+    cursor: pointer;
+    border-radius: 20px;
+    height:40px;
+    margin:10px 15px;
+    position:relative;
+    transition: background-color 0.3s linear;
+}
+
+label .circle{
+    position: absolute;
+    height:35px;
+    width:35px;
+    background-color: #fff;
+    border-radius: 50%;
+    top:2.5px;
+    left:3px;
+    transform: translateX(0);
+    animation: moveCircleOff 0.2s linear forwards;
+}
+
+.input:checked + label{
+    background-color:rgba(0, 255, 21, 0.815);
+    transition: background-color 0.3s linear;
+}
+
+.input:checked + label .circle{
+    animation: moveCircleOn 0.2s linear forwards;
+}
+
+@keyframes moveCircleOn{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(29.5px);
+    }
+}
+
+@keyframes moveCircleOff{
+    from{
+        transform: translateX(29.5px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
