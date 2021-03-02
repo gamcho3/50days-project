@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'RocknRoll One', sans-serif;
+    margin:0;
+    overflow: hidden;
+    height:100vh;
+}
+
+.counter{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(1);
+    text-align: center;
+    
+}
+
+.counter.hide{
+    transform: translate(-50%,-50%) scale(0);
+    animation: hide .5s ease-in-out;
+}
+
+.nums{
+    position: relative;
+    font-size: 50px;
+    color:chocolate;
+    font-weight: bold;
+    width:250px;
+    height:50px;
+    overflow: hidden;  
+   
+
+}
+
+.nums span{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(120deg);
+    transform-origin: bottom center;
+      
+}
+
+.nums span.in{
+    transform:translate(-50%,-50%) rotate(0deg);
+    animation: goIn 0.5s ease-in-out;
+}
+
+.nums span.out{
+    transform:translate(-50%,-50%) rotate(-120deg);
+    animation: goOut .5s ease-in-out;
+}
+
+.final{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    
+}
+
+.final.show{
+    transform: translate(-50%,-50%) scale(1);
+    animation: Show .5s ease-in-out;
+}
+
+@keyframes Show{
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+    60%{
+        transform: translate(-50%,-50%) scale(1.4);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+
+@keyframes Hide{
+    0%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    30%{
+        transform: translate(-50%,-50%) scale(1.4);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+}
+
+@keyframes goIn{
+    0%{
+        transform:translate(-50%,-50%) rotate(120deg);
+    }
+    30%{
+        transform:translate(-50%,-50%) rotate(-20deg);
+    }
+    100%{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@keyframes goOut{
+    0%{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+    30%{
+        transform:translate(-50%,-50%) rotate(20deg);
+    }
+    100%{
+        transform:translate(-50%,-50%) rotate(-120deg);
+    }
+}
