@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Blinker', sans-serif;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:400px;
+    height:300px;
+    background-color: #fff;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3), 5px 5px 10px rgba(255,255,255,0.5);
+}
+
+.container h3{
+    margin:0;
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    margin:10px 5px;
+    cursor: pointer;
+    font-size: 15px;
+    flex: 1;
+}
+
+.icon:hover,.icon:active{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.icon img{
+    
+    width:45px;
+    height:45px;
+    margin-bottom: 10px;
+}
+
+.icon p{
+    margin:0;
+    line-height: 20px;
+}
+
+input[type=text]{
+    margin-top:15px;
+    padding:10px 15px;
+    border:0;
+    background-color: black;
+    border-radius: 20px;
+    width:70%;
+    color:#eee;
+   }
+
+input:focus{
+    outline: none;
+}
