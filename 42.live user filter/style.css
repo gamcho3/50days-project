@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Condensed:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    font-family: 'PT Sans', sans-serif;
+
+    background-color: floralwhite;
+}
+
+.container{
+    background-color: #fff;
+    width:300px;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.top{
+    background-color: royalblue;
+    color:#fff;
+    padding:20px 15px;
+    width:100%;
+}
+
+h2{
+    margin:0;
+}
+
+.top h2{
+    letter-spacing: 1px;
+    margin:0;
+    font-size:20px;
+    
+}
+
+.top p{
+    opacity: 0.8;
+    margin:5px 0 20px;
+    font-size:15px;
+}
+
+.top input{
+    width:100%;
+    border-radius: 20px;
+    border: none;
+    font-size:15px;
+    padding:10px;
+    background-color: rgb(51, 51, 110);
+    color:#eee;
+}
+
+.list{
+    height:400px;
+    overflow-y: auto;
+}
+
+.list ul{
+    margin:0;
+    padding:0;
+}
+
+.list li{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding:20px 15px;
+    cursor: pointer;
+
+}
+
+.list li.hide{
+    display:none;
+}
+
+.list li img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid darkgreen;
+
+}
+
+.list li .info{
+    margin:0 10px;
+}
+
+.info .name{
+    margin:0;
+    margin-bottom: 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.profile *{
+    margin:0;
+}
+
+.profile img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border:2px solid black;
+}
