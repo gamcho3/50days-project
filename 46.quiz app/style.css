@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    font-family: 'Lora', serif;
+    background-color: blanchedalmond;
+}
+
+.container{
+    background-color: #fff;
+    width:500px;
+    height:300px;
+    padding:20px;
+    box-shadow: 0 0 10px 2px rgba(100,100,100,0.2);
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.container h2{
+    text-align: center;
+    margin:0;
+}
+
+.container p{
+text-align: center;
+}
+
+.reset{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: teal;
+    color: #fff;
+    border: none;
+    padding:10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.container ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li{
+    padding:10px;
+    
+    
+}
+
+.container ul li:hover{
+    box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.radio-item{
+    display: none;
+}
+
+.radio-item:checked + label{
+    color: red;
+}
+
+.container ul li label{
+    cursor: pointer;
+}
+
+
+
+
+
+.submit{
+position: absolute;
+bottom:0;
+width:100%;
+left:0;
+border: 0;
+padding:10px;
+cursor: pointer;
+font-size: 1rem;
+background-color: slateblue;
+color:#eee;
+}
