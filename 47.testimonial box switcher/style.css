@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    background-color: #eee;
+}
+
+.container{
+    color:#fff;
+    background-color: darkcyan;
+    width:600px;
+    padding:20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 2px rgba(0,0,0,0.3);
+
+}
+
+.progress-bar{
+    background-color: #fff;
+    height:5px;
+    width:100%;
+    border-radius: 5px; 
+    animation: grow 9s linear infinite;
+    transform-origin: left;
+}
+
+@keyframes grow{
+    0%{
+        transform: scaleX(0);
+    }
+}
+
+.container p{
+letter-spacing: 3px;
+line-height: 30px;
+padding:10px 0px;
+}
+
+.user-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-container img{
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+}
+
+.user-container .user-info{
+    margin-left: 10px;
+}
